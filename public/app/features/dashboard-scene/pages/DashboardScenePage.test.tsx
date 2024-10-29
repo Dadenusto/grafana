@@ -295,7 +295,7 @@ describe('DashboardScenePage', () => {
       setup();
 
       await waitFor(() => expect(screen.queryByText('Refresh')).toBeInTheDocument());
-      await waitFor(() => expect(screen.queryByText('Last 6 hours')).toBeInTheDocument());
+      await waitFor(() => expect(screen.queryByText('Последние 6 часов')).toBeInTheDocument());
     });
   });
 });
@@ -310,6 +310,6 @@ function CustomVizPanel(props: VizProps) {
 }
 
 async function waitForDashboardToRender() {
-  expect(await screen.findByText('Last 6 hours')).toBeInTheDocument();
+  expect(await screen.findByText('Последние 6 часов')).toBeInTheDocument();
   expect(await screen.findByTitle('Panel A')).toBeInTheDocument();
 }

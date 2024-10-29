@@ -60,8 +60,8 @@ export function VariableEditorList({
               >
                 <thead>
                   <tr>
-                    <th>Variable</th>
-                    <th>Definition</th>
+                    <th>Переменная</th>
+                    <th>Определение</th>
                     <th colSpan={5} />
                   </tr>
                 </thead>
@@ -95,7 +95,7 @@ export function VariableEditorList({
                 onClick={onAdd}
                 icon="plus"
               >
-                New variable
+                Новая переменная
               </Button>
             </Stack>
           </Stack>

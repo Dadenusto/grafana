@@ -373,7 +373,7 @@ This variable is the `$__rate_interval` variable in milliseconds, not a time-int
 
 ### $timeFilter or $\_\_timeFilter
 
-The `$timeFilter` variable returns the currently selected time range as an expression. For example, the time range interval `Last 7 days` expression is `time > now() - 7d`.
+The `$timeFilter` variable returns the currently selected time range as an expression. For example, the time range interval `Последние 7 дней` expression is `time > now() - 7d`.
 
 This is used in several places, including:
 

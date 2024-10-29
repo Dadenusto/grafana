@@ -218,7 +218,7 @@ Panel data source query options include:
   | The day so far   | `now/d`             |
   | Last 5 days      | `now-5d/d`          |
   | This week so far | `now/w`             |
-  | Last 2 years     | `now-2y/y`          |
+  | Последние 2 года     | `now-2y/y`          |
 
 {{< docs/play title="Time range override" url="https://play.grafana.org/d/000000041/" >}}
 

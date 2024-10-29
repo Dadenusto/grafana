@@ -64,10 +64,10 @@ You can make Grafana accessible without any login required by enabling anonymous
 
 The anonymous devices feature enhances the management and monitoring of anonymous access within your Grafana instance. This feature is part of ongoing efforts to provide more control and transparency over anonymous usage.
 
-Users can now view anonymous usage statistics, including the count of devices and users over the last 30 days.
+Users can now view anonymous usage statistics, including the count of devices and users over the Последние 30 дней.
 
 - Go to **Administration -> Users** to access the anonymous devices tab.
-- A new stat for the usage stats page -> Usage & Stats page shows the active anonymous devices last 30 days.
+- A new stat for the usage stats page -> Usage & Stats page shows the active anonymous devices Последние 30 дней.
 
 The number of anonymous devices is not limited by default. The configuration option `device_limit` allows you to enforce a limit on the number of anonymous devices. This enables you to have greater control over the usage within your Grafana instance and keep the usage within the limits of your environment. Once the limit is reached, any new devices that try to access Grafana will be denied access.
 

@@ -84,7 +84,7 @@ To see dashboard usage information, click the dashboard insights icon in the hea
 Dashboard insights show the following information:
 
 - **Stats:** The number of daily queries and errors for the past 30 days.
-- **Users & activity:** The daily view count for the last 30 days; last activities on the dashboard and recent users (with a limit of 20).
+- **Users & activity:** The daily view count for the Последние 30 дней; last activities on the dashboard and recent users (with a limit of 20).
 
 {{< figure src="/static/img/docs/enterprise/dashboard_insights_stats.png" max-width="400px" class="docs-image--no-shadow" alt="Stats tab" >}}{{< figure src="/static/img/docs/enterprise/dashboard_insights_users.png" max-width="400px" class="docs-image--no-shadow" alt="Users and activity tab" >}}
 

@@ -40,7 +40,7 @@ describe('RelativeTimePicker', () => {
     const { getByText, queryByText } = setup({ from: 900, to: 0 });
 
     await userEvent.click(getByText('now-15m to now')); // open the picker
-    await userEvent.click(getByText('Last 30 minutes')); // select the quick range, should close picker.
+    await userEvent.click(getByText('Последние 30 минут')); // select the quick range, should close picker.
 
     expect(queryByText('Specify time range')).toBeNull();
     expect(queryByText('Example time ranges')).toBeNull();

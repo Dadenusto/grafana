@@ -75,15 +75,15 @@ const UserListAdminPageUnConnected = ({
       <div className={styles.actionBar} data-testid={selectors.container}>
         <div className={styles.row}>
           <FilterInput
-            placeholder="Search user by login, email, or name."
+            placeholder="Найдите пользователя по логину, электронной почте или имени.."
             autoFocus={true}
             value={query}
             onChange={changeQuery}
           />
           <RadioButtonGroup
             options={[
-              { label: 'All users', value: false },
-              { label: 'Active last 30 days', value: true },
+              { label: 'Все пользователи', value: false },
+              { label: 'Активные в течение последних 30 дней', value: true },
             ]}
             onChange={(value) => changeFilter({ name: 'activeLast30Days', value })}
             value={filters.find((f) => f.name === 'activeLast30Days')?.value}

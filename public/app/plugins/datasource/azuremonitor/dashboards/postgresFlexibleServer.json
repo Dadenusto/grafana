@@ -7188,7 +7188,7 @@
             "type": "grafana-azure-monitor-datasource",
             "uid": "${ds}"
           },
-          "description": "Indicates if the database is up or not in the last 30 days",
+          "description": "Indicates if the database is up or not in the Последние 30 дней",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7347,7 +7347,7 @@
           ],
           "timeFrom": "30d",
           "timeShift": "1m",
-          "title": " Database availability (Last 30 days)",
+          "title": " Database availability (Последние 30 дней)",
           "type": "timeseries"
         },
         {
@@ -7511,11 +7511,11 @@
           ],
           "timeFrom": "30d",
           "timeShift": "1m",
-          "title": "Backup Storage Used (last 30 days)",
+          "title": "Backup Storage Used (Последние 30 дней)",
           "type": "timeseries"
         }
       ],
-      "title": "Historical Metrics (last 30 days)",
+      "title": "Historical Metrics (Последние 30 дней)",
       "type": "row"
     }
   ],

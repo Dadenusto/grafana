@@ -211,7 +211,7 @@ When you become a Grafana Enterprise customer, you receive a license that govern
 
 Your Grafana license includes a maximum number of active users.
 
-- An _active user_ is a user who has signed in to Grafana within the last 30 days. This is a rolling window that is updated daily.
+- An _active user_ is a user who has signed in to Grafana within the Последние 30 дней. This is a rolling window that is updated daily.
 - When you reach the maximum number of active users, only currently active users (users who have signed in over the past 30 days) can sign in. When a new user or a previously-inactive user tries to sign in, the user will see an error message indicating that Grafana has reached its license limit.
 - The user's role, number of dashboards that a user can view or edit, and the number of organizations that they can access does not affect the active user count.
 - A license limit banner appears to administrators when Grafana reaches its active user limit; editors and viewers do not see the banner.

@@ -304,7 +304,7 @@ export class PanelEditorUnconnected extends PureComponent<Props> {
           {this.renderTemplateVariables(styles)}
           <Stack gap={1}>
             <InlineSwitch
-              label="Table view"
+              label="Табличное представление"
               showLabel={true}
               id="table-view"
               value={tableViewEnabled}

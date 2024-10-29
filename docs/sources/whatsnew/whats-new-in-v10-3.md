@@ -397,13 +397,13 @@ The anonymous devices feature improves the management and monitoring of anonymou
 
 **Anonymous Device:**
 
-When anonymous access has been enabled, any device which accesses Grafana in the last 30 days (without logging in) is considered an active anonymous device. Users can now view anonymous devices on the users page, anonymous usage statistics, including the count of devices and users over this period.
+When anonymous access has been enabled, any device which accesses Grafana in the Последние 30 дней (without logging in) is considered an active anonymous device. Users can now view anonymous devices on the users page, anonymous usage statistics, including the count of devices and users over this period.
 
 **Grafana UI:**
 
 - Navigate to Administration -> Users to access the anonymous devices tab.
 
-- A new statistic has been added to the Usage & Stats page, displaying active anonymous devices from the last 30 days.
+- A new statistic has been added to the Usage & Stats page, displaying active anonymous devices from the Последние 30 дней.
 
 {{< youtube id="B72X3_9e-ds" >}}
 

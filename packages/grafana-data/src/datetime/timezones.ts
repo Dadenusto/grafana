@@ -142,7 +142,7 @@ const mapInternal = (zone: string, timestamp: number): TimeZoneInfo | undefined 
         abbreviation: 'Your local time',
         offsetInMins: new Date().getTimezoneOffset(),
         ...info,
-        name: 'Browser Time',
+        name: 'Время браузера',
         ianaName: info?.ianaName ?? '',
         zone,
       };
@@ -358,7 +358,7 @@ const countryByCode: Record<string, string> = {
   QA: 'Qatar',
   RE: 'Reunion',
   RO: 'Romania',
-  RU: 'Russian Federation',
+  RU: 'Российская Федерация',
   RW: 'Rwanda',
   BL: 'Saint Barthelemy',
   SH: 'Saint Helena',

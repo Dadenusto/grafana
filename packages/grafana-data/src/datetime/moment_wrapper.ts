@@ -148,7 +148,7 @@ export const getWeekdayIndex = (day: string) => {
 };
 
 export const getWeekdayIndexByEnglishName = (day: string) =>
-  ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].findIndex(
+  ['Sunday', 'Понедельник', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].findIndex(
     (wd) => wd.toLowerCase() === day.toLowerCase()
   );
 

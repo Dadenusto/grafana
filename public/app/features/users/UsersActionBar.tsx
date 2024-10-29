@@ -57,7 +57,7 @@ export const UsersActionBarUnconnected = ({
         <FilterInput
           value={searchQuery}
           onChange={changeSearchQuery}
-          placeholder="Search user by login, email or name"
+          placeholder="Найдите пользователя по логину, электронной почте или имени."
         />
       </InlineField>
       {pendingInvitesCount > 0 && (

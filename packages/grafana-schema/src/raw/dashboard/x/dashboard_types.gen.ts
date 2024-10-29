@@ -775,7 +775,7 @@ export interface Panel {
    * the dashboard time picker in the top-right corner of the dashboard. You can use this to show metrics from different
    * time periods or days on the same dashboard.
    * The value is formatted as time operation like: `now-5m` (Last 5 minutes), `now/d` (the day so far),
-   * `now-5d/d`(Last 5 days), `now/w` (This week so far), `now-2y/y` (Last 2 years).
+   * `now-5d/d`(Last 5 days), `now/w` (This week so far), `now-2y/y` (Последние 2 года).
    * Note: Panel time overrides have no effect when the dashboard’s time range is absolute.
    * See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
    */

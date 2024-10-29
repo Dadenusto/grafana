@@ -85,7 +85,7 @@ Each field in the dashboard JSON is explained below with its usage:
 | **timezone**      | timezone of dashboard, i.e. `utc` or `browser`                                                                    |
 | **editable**      | whether a dashboard is editable or not                                                                            |
 | **graphTooltip**  | 0 for no shared crosshair or tooltip (default), 1 for shared crosshair, 2 for shared crosshair AND shared tooltip |
-| **time**          | time range for dashboard, i.e. last 6 hours, last 7 days, etc                                                     |
+| **time**          | time range for dashboard, i.e. last 6 hours, Последние 7 дней, etc                                                     |
 | **timepicker**    | timepicker metadata, see [timepicker section](#timepicker) for details                                            |
 | **templating**    | templating metadata, see [templating section](#templating) for details                                            |
 | **annotations**   | annotations metadata, see [annotations](ref:annotations) for how to add them                                      |

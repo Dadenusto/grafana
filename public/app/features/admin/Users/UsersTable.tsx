@@ -51,7 +51,7 @@ export const UsersTable = ({
       },
       {
         id: 'login',
-        header: 'Login',
+        header: 'Логин',
         cell: ({ row: { original } }: Cell<'login'>) => {
           return (
             <TextLink color="primary" inline={false} href={`/admin/users/edit/${original.id}`} title="Edit user">
@@ -69,7 +69,7 @@ export const UsersTable = ({
       },
       {
         id: 'name',
-        header: 'Name',
+        header: 'Имя',
         cell: ({ cell: { value } }: Cell<'name'>) => value,
         sortType: 'string',
       },
@@ -77,7 +77,7 @@ export const UsersTable = ({
         ? [
             {
               id: 'orgs',
-              header: 'Belongs to',
+              header: 'GПринадлежит к',
               cell: ({ cell: { value, row } }: Cell<'orgs'>) => {
                 return (
                   <Stack alignItems={'center'}>
@@ -115,7 +115,7 @@ export const UsersTable = ({
         : []),
       {
         id: 'lastSeenAtAge',
-        header: 'Last active',
+        header: 'Последня активность',
         headerTooltip: {
           content: 'Time since user was seen using Grafana',
           iconName: 'question-circle',
@@ -127,7 +127,7 @@ export const UsersTable = ({
       },
       {
         id: 'authLabels',
-        header: 'Origin',
+        header: 'Источник',
         cell: ({ cell: { value } }: Cell<'authLabels'>) => (
           <>{Array.isArray(value) && value.length > 0 && <TagBadge label={value[0]} removeIcon={false} count={0} />}</>
         ),
@@ -148,7 +148,7 @@ export const UsersTable = ({
               icon="pen"
               href={`admin/users/edit/${original.id}`}
               aria-label={`Edit user ${original.name}`}
-              tooltip={'Edit user'}
+              tooltip={'изменить пользователя'}
             />
           );
         },

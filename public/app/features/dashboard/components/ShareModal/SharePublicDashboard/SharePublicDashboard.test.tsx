@@ -167,7 +167,7 @@ describe('SharePublic', () => {
     await renderSharePublicDashboard();
     await waitFor(() => screen.getByText('Time range ='));
 
-    expect(screen.getByText('Last 6 hours')).toBeInTheDocument();
+    expect(screen.getByText('Последние 6 часов')).toBeInTheDocument();
   });
   it('renders default relative time in settings when they are open', async () => {
     expect(mockDashboard.time).toEqual({ from: 'now-6h', to: 'now' });
@@ -178,7 +178,7 @@ describe('SharePublic', () => {
     await renderSharePublicDashboard();
     await userEvent.click(screen.getByText('Settings'));
 
-    expect(screen.queryAllByText('Last 6 hours')).toHaveLength(2);
+    expect(screen.queryAllByText('Последние 6 часов')).toHaveLength(2);
   });
   it('when modal is opened, then checkboxes are enabled but create button is disabled', async () => {
     server.use(getNonExistentPublicDashboardResponse());

@@ -102,11 +102,11 @@ export const SaveDashboardDrawer = ({ dashboard, onDismiss, onSaveSuccess, isCop
     );
   }
 
-  let title = 'Save dashboard';
+  let title = 'Сохранить дашборд';
   if (isCopy) {
-    title = 'Save dashboard copy';
+    title = 'Сохранить копию дашборд';
   } else if (isProvisioned) {
-    title = 'Provisioned dashboard';
+    title = 'Подготовленный дашборд ';
   }
 
   return (

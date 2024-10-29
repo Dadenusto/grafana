@@ -52,10 +52,10 @@ export class SaveDashboardDrawer extends SceneObjectBase<SaveDashboardDrawerStat
 
     const tabs = (
       <TabsBar>
-        <Tab label={'Details'} active={!showDiff} onChangeTab={() => model.setState({ showDiff: false })} />
+        <Tab label={'Подробности'} active={!showDiff} onChangeTab={() => model.setState({ showDiff: false })} />
         {changesCount > 0 && (
           <Tab
-            label={'Changes'}
+            label={'Подробности'}
             active={showDiff}
             onChangeTab={() => model.setState({ showDiff: true })}
             counter={changesCount}
@@ -64,11 +64,11 @@ export class SaveDashboardDrawer extends SceneObjectBase<SaveDashboardDrawerStat
       </TabsBar>
     );
 
-    let title = 'Save dashboard';
+    let title = 'Сохранить дашборд';
     if (saveAsCopy) {
-      title = 'Save dashboard copy';
+      title = 'Сохранить копию дашборда';
     } else if (isProvisioned) {
-      title = 'Provisioned dashboard';
+      title = 'Подготовленный дашборд';
     }
 
     const renderBody = () => {

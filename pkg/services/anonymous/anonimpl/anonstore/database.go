@@ -223,7 +223,7 @@ func (s *AnonDBStore) SearchDevices(ctx context.Context, query *SearchDeviceQuer
 			return fmt.Errorf("to date must be set if from date is set")
 		}
 
-		// restricted only to last 30 days, if noting else specified
+		// restricted only to Последние 30 дней, if noting else specified
 		if query.From.IsZero() && query.To.IsZero() {
 			query.From = time.Now().Add(-anonymousDeviceExpiration)
 			query.To = time.Now()

@@ -40,7 +40,7 @@ export class RefreshPicker extends PureComponent<Props> {
     ariaLabel: 'Turn on live streaming',
   };
   static autoOption = {
-    label: 'Auto',
+    label: 'Автоматически',
     value: 'auto',
     ariaLabel: 'Select refresh from the query range',
   };

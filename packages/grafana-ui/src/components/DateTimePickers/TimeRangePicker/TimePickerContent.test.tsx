@@ -137,8 +137,8 @@ function renderComponent({
       onChangeTimeZone={noop}
       onChange={noop}
       quickOptions={[
-        { from: 'now-5m', to: 'now', display: 'Last 5 minutes' },
-        { from: 'now-15m', to: 'now', display: 'Last 15 minutes' },
+        { from: 'now-5m', to: 'now', display: 'Последние 5 минут' },
+        { from: 'now-15m', to: 'now', display: 'Последние 15 минут' },
       ]}
       timeZone="utc"
       value={value}

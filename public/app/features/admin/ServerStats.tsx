@@ -82,7 +82,7 @@ export const ServerStats = () => {
               { name: 'Organisations', value: stats?.orgs },
               { name: 'Users total', value: stats?.users },
               { name: 'Active sessions', value: stats?.activeSessions },
-              { name: 'Active users in last 30 days', value: stats?.activeUsers },
+              { name: 'Active users in Последние 30 дней', value: stats?.activeUsers },
               ...getAnonymousStatsContent(stats, config),
             ]}
             footer={
@@ -108,7 +108,7 @@ const getAnonymousStatsContent = (stats: ServerStat | null, config: GrafanaBootC
       {
         name: 'Active anonymous devices',
         value: `${stats.activeDevices}`,
-        tooltip: 'Detected devices that are not logged in, in last 30 days.',
+        tooltip: 'Detected devices that are not logged in, in Последние 30 дней.',
       },
     ];
   } else {
@@ -116,7 +116,7 @@ const getAnonymousStatsContent = (stats: ServerStat | null, config: GrafanaBootC
       {
         name: 'Active anonymous devices',
         value: `${stats.activeDevices} / ${config.anonymousDeviceLimit}`,
-        tooltip: 'Detected devices that are not logged in, in last 30 days.',
+        tooltip: 'Detected devices that are not logged in, in Последние 30 дней.',
         highlight: stats.activeDevices > config.anonymousDeviceLimit,
       },
     ];

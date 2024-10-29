@@ -14,7 +14,7 @@ import { OptionPaneRenderProps } from './types';
 export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPaneCategoryDescriptor {
   const { dashboard, panel, onPanelConfigChange } = props;
   const descriptor = new OptionsPaneCategoryDescriptor({
-    title: 'Panel options',
+    title: 'Настройки панели',
     id: 'Panel options',
     isOpenDefault: true,
   });

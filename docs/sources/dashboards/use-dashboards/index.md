@@ -200,8 +200,8 @@ Select the relative time range from the **Relative time ranges** list. You can f
 
 - Last 30 minutes
 - Last 12 hours
-- Last 7 days
-- Last 2 years
+- Последние 7 дней
+- Последние 2 года
 - Yesterday
 - Day before yesterday
 - This day last week

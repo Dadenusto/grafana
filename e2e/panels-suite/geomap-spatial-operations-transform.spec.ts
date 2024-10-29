@@ -49,7 +49,7 @@ describe('Geomap spatial operations', () => {
       });
   });
 
-  it('Tests geoshash field column appears in table view', () => {
+  it('Tests geoshash field column appears in Табличное представление', () => {
     e2e.flows.openDashboard({ uid: DASHBOARD_ID, queryParams: { editPanel: 1 } });
     e2e.components.Tab.title('Transformations').should('be.visible').click();
     e2e.components.Transforms.addTransformationButton().scrollIntoView().should('be.visible').click();

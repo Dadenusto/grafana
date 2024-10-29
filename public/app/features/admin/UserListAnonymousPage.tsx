@@ -65,7 +65,7 @@ const UserListAnonymousDevicesPageUnConnected = ({
             onChange={changeAnonQuery}
           />
           <RadioButtonGroup
-            options={[{ label: 'Active last 30 days', value: true }]}
+            options={[{ label: 'Активные в течение последних 30 дней', value: true }]}
             // onChange={(value) => changeFilter({ name: 'activeLast30Days', value })}
             value={filters.find((f) => f.name === 'activeLast30Days')?.value}
             className={styles.filter}

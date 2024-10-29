@@ -243,7 +243,7 @@ export class QueryInspector extends PureComponent<Props, State> {
             onClick={onRefreshQuery}
             aria-label={selectors.components.PanelInspector.Query.refreshButton}
           >
-            <Trans i18nKey="inspector.query.refresh">Refresh</Trans>
+            <Trans i18nKey="inspector.query.refresh">Обновить</Trans>
           </Button>
 
           {haveData && allNodesExpanded && (

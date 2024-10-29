@@ -233,7 +233,7 @@ To learn more, refer to our [public dashboards documentation](https://grafana.co
 
 _Available in public preview in Grafana Enterprise, Cloud Pro, and Cloud Advanced._
 
-Public dashboards insights provide valuable information about your public dashboard usage. You can easily access and view important metrics such as the daily query count, the number of views in the last 30 days, and the number of errors in the last 30 days.
+Public dashboards insights provide valuable information about your public dashboard usage. You can easily access and view important metrics such as the daily query count, the number of views in the Последние 30 дней, and the number of errors in the Последние 30 дней.
 
 To try it out, enable the `publicDashboards` feature toggle. If you’re using Grafana Cloud, and would like to enable this feature, please contact customer support.
 

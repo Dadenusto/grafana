@@ -65,14 +65,14 @@ export const SaveDashboardAsForm = ({
 
   const validateDashboardName = (getFormValues: () => SaveDashboardAsFormDTO) => async (dashboardName: string) => {
     if (dashboardName && dashboardName === getFormValues().$folder.title?.trim()) {
-      return 'Dashboard name cannot be the same as folder name';
+      return 'Имя дашборда не может совпадать с именем папки';
     }
 
     try {
       await validationSrv.validateNewDashboardName(getFormValues().$folder.uid ?? 'general', dashboardName);
       return true;
     } catch (e) {
-      return e instanceof Error ? e.message : 'Dashboard name is invalid';
+      return e instanceof Error ? e.message : 'Неверное имя дашборда';
     }
   };
 
@@ -111,7 +111,7 @@ export const SaveDashboardAsForm = ({
               <Field
                 label={
                   <Stack justifyContent="space-between">
-                    <Label htmlFor="title">Title</Label>
+                    <Label htmlFor="title">Название</Label>
                     {config.featureToggles.dashgpt && isNew && (
                       <GenAIDashTitleButton onGenerate={(title) => field.onChange(title)} />
                     )}
@@ -123,7 +123,7 @@ export const SaveDashboardAsForm = ({
                 <Input
                   {...field}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => field.onChange(e.target.value)}
-                  aria-label="Save dashboard title field"
+                  aria-label="Сохранить поле заголовка дашборда"
                   autoFocus
                 />
               </Field>
@@ -139,7 +139,7 @@ export const SaveDashboardAsForm = ({
               <Field
                 label={
                   <Stack justifyContent="space-between">
-                    <Label htmlFor="description">Description</Label>
+                    <Label htmlFor="description">Описание</Label>
                     {config.featureToggles.dashgpt && isNew && (
                       <GenAIDashDescriptionButton onGenerate={(description) => field.onChange(description)} />
                     )}
@@ -151,7 +151,7 @@ export const SaveDashboardAsForm = ({
                 <TextArea
                   {...field}
                   onChange={(e: ChangeEvent<HTMLTextAreaElement>) => field.onChange(e.target.value)}
-                  aria-label="Save dashboard description field"
+                  aria-label="Сохранить поле описания дашборда"
                   autoFocus
                 />
               </Field>
@@ -177,7 +177,7 @@ export const SaveDashboardAsForm = ({
             />
           </Field>
           {!isNew && (
-            <Field label="Copy tags">
+            <Field label="Копировать теги">
               <Switch {...register('copyTags')} />
             </Field>
           )}
@@ -186,7 +186,7 @@ export const SaveDashboardAsForm = ({
               Cancel
             </Button>
             <Button disabled={isLoading} type="submit" aria-label="Save dashboard button">
-              {isLoading ? 'Saving...' : 'Save'}
+              {isLoading ? 'Сохранение...' : 'Сохранить'}
             </Button>
           </Stack>
         </>

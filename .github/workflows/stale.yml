@@ -28,14 +28,14 @@ jobs:
             Thank you for your contributions!
           close-issue-message: >
             This issue has been automatically closed because it has not had any further
-            activity in the last 30 days. Thank you for your contributions!
+            activity in the Последние 30 дней. Thank you for your contributions!
           days-before-pr-stale: 30
           days-before-pr-close: 14
           stale-pr-label: stale
           exempt-pr-labels: no stalebot
           stale-pr-message: >
             This pull request has been automatically marked as stale because it has not had
-            activity in the last 30 days. It will be closed in 2 weeks if no further activity occurs. Please
+            activity in the Последние 30 дней. It will be closed in 2 weeks if no further activity occurs. Please
             feel free to give a status update or ping for review. Thank you for your contributions!
           close-pr-message: >
             This pull request has been automatically closed because it has not had any further

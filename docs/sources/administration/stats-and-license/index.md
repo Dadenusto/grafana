@@ -62,11 +62,11 @@ The following statistics are displayed in the Stats tab:
 - Total admins
 - Total editors
 - Total viewers
-- Active users (seen last 30 days)
+- Active users (seen Последние 30 дней)
   **Note:** Active users = Active admins + Active editors + Active viewers
-- Active admins (seen last 30 days)
-- Active editors (seen last 30 days)
-- Active viewers (seen last 30 days)
+- Active admins (seen Последние 30 дней)
+- Active editors (seen Последние 30 дней)
+- Active viewers (seen Последние 30 дней)
 - Active sessions
 - Total dashboards
 - Total orgs

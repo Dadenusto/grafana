@@ -83,12 +83,12 @@ export const SaveDashboardDiff = ({
           {value && value.schemaChange && value.schemaChange}
           {value && value.showDiffs && value.diffs}
           <Box paddingTop={1}>
-            <h4>Full JSON diff</h4>
+            <h4>Полное различие в формате JSON</h4>
             {value.jsonView}
           </Box>
         </>
       ) : (
-        <Box paddingTop={1}>No changes in the dashboard JSON</Box>
+        <Box paddingTop={1}>Никаких изменений в JSON дашборда</Box>
       )}
     </Stack>
   );

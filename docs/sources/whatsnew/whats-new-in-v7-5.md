@@ -143,7 +143,7 @@ If a Grafana instance has exceeded its licensed number of active users, then non
 
 Here is an example:
 
-A Grafana Enterprise instance includes 100 Viewers and 50 Editor/Admins. Over the course of the last 30 days, 110 Viewers and 20 Editor/Admins have signed in to Grafana.
+A Grafana Enterprise instance includes 100 Viewers and 50 Editor/Admins. Over the course of the Последние 30 дней, 110 Viewers and 20 Editor/Admins have signed in to Grafana.
 
 All of the Viewers who have signed in over the past 30 days will retain the ability to sign in.
 

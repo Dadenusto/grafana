@@ -53,7 +53,7 @@ const LoginPage = () => {
                         fill="text"
                         href={`${config.appSubUrl}/user/password/send-reset-email`}
                       >
-                        <Trans i18nKey="login.forgot-password">Forgot your password?</Trans>
+                        <Trans i18nKey="login.forgot-password">Забыли пароль?</Trans>
                       </LinkButton>
                     )}
                   </Stack>

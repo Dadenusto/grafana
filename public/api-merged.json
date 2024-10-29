@@ -8881,7 +8881,7 @@
         "tags": [
           "devices"
         ],
-        "summary": "Lists all devices within the last 30 days",
+        "summary": "Lists all devices within the Последние 30 дней",
         "operationId": "SearchDevices",
         "responses": {
           "200": {
@@ -9429,7 +9429,7 @@
         "tags": [
           "devices"
         ],
-        "summary": "Lists all devices within the last 30 days",
+        "summary": "Lists all devices within the Последние 30 дней",
         "operationId": "listDevices",
         "responses": {
           "200": {

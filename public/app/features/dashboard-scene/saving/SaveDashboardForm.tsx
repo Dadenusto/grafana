@@ -41,7 +41,7 @@ export function SaveDashboardForm({ dashboard, drawer, changeInfo }: Props) {
 
   const cancelButton = (
     <Button variant="secondary" onClick={() => dashboard.closeModal()} fill="outline">
-      Cancel
+      Отмена
     </Button>
   );
 
@@ -52,8 +52,8 @@ export function SaveDashboardForm({ dashboard, drawer, changeInfo }: Props) {
   function renderFooter(error?: Error) {
     if (isVersionMismatchError(error)) {
       return (
-        <Alert title="Someone else has updated this dashboard" severity="error">
-          <p>Would you still like to save this dashboard?</p>
+        <Alert title="Кто-то другой обновил этот дашборд" severity="error">
+          <p>Вы все еще хотите сохранить этот дашборд?</p>
           <Box paddingTop={2}>
             <Stack alignItems="center">
               {cancelButton}
@@ -70,7 +70,7 @@ export function SaveDashboardForm({ dashboard, drawer, changeInfo }: Props) {
 
     if (isPluginDashboardError(error)) {
       return (
-        <Alert title="Plugin dashboard" severity="error">
+        <Alert title="Панель управления плагинами" severity="error">
           <p>
             Your changes will be lost when you update the plugin. Use <strong>Save As</strong> to create custom version.
           </p>
@@ -87,14 +87,14 @@ export function SaveDashboardForm({ dashboard, drawer, changeInfo }: Props) {
     return (
       <>
         {error && (
-          <Alert title="Failed to save dashboard" severity="error">
+          <Alert title="Не удалось сохранить панель мониторинга" severity="error">
             <p>{error.message}</p>
           </Alert>
         )}
         <Stack alignItems="center">
           {cancelButton}
           {saveButton(false)}
-          {!hasChanges && <div>No changes to save</div>}
+          {!hasChanges && <div>Никаких изменений для сохранения</div>}
         </Stack>
       </>
     );
@@ -103,7 +103,7 @@ export function SaveDashboardForm({ dashboard, drawer, changeInfo }: Props) {
   return (
     <Stack gap={2} direction="column">
       <SaveDashboardFormCommonOptions drawer={drawer} changeInfo={changeInfo} />
-      <Field label="Message">
+      <Field label="Сообщение">
         <TextArea
           aria-label="message"
           value={options.message ?? ''}
@@ -113,7 +113,7 @@ export function SaveDashboardForm({ dashboard, drawer, changeInfo }: Props) {
               message: e.currentTarget.value,
             });
           }}
-          placeholder="Add a note to describe your changes (optional)."
+          placeholder="Добавьте примечание с описанием ваших изменений."
           autoFocus
           rows={5}
         />
@@ -139,16 +139,16 @@ export function SaveDashboardFormCommonOptions({ drawer, changeInfo }: SaveDashb
           id="save-timerange"
           checked={saveTimeRange}
           onChange={drawer.onToggleSaveTimeRange}
-          label="Update default time range"
-          description={'Will make current time range the new default'}
+          label="Обновить диапазон времени по умолчанию"
+          description={'Сделает текущий временной диапазон новым значением по умолчанию'}
           data-testid={selectors.pages.SaveDashboardModal.saveTimerange}
         />
       )}
       {hasRefreshChange && (
         <Checkbox
           id="save-refresh"
-          label="Update default refresh value"
-          description="Will make the current refresh the new default"
+          label="Обновить значение обновления по умолчанию"
+          description="Сделает текущее обновление новым значением по умолчанию"
           checked={saveRefresh}
           onChange={drawer.onToggleSaveRefresh}
           data-testid={selectors.pages.SaveDashboardModal.saveRefresh}
@@ -157,8 +157,8 @@ export function SaveDashboardFormCommonOptions({ drawer, changeInfo }: SaveDashb
       {hasVariableValueChanges && (
         <Checkbox
           id="save-variables"
-          label="Update default variable values"
-          description="Will make the current values the new default"
+          label="Обновить значения переменных по умолчанию"
+          description="Сделает текущие значения новыми по умолчанию"
           checked={saveVariables}
           onChange={drawer.onToggleSaveVariables}
           data-testid={selectors.pages.SaveDashboardModal.saveVariables}

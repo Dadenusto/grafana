@@ -22830,7 +22830,7 @@
             "$ref": "#/components/responses/internalServerError"
           }
         },
-        "summary": "Lists all devices within the last 30 days",
+        "summary": "Lists all devices within the Последние 30 дней",
         "tags": [
           "devices"
         ]
@@ -23413,7 +23413,7 @@
             "$ref": "#/components/responses/internalServerError"
           }
         },
-        "summary": "Lists all devices within the last 30 days",
+        "summary": "Lists all devices within the Последние 30 дней",
         "tags": [
           "devices"
         ]

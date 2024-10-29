@@ -54,7 +54,7 @@ export function TemplatePreview({
             size="sm"
             variant="secondary"
           >
-            Refresh
+            Обновить
           </Button>
         }
       />

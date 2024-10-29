@@ -69,20 +69,20 @@ export default function UserListPage() {
       {showAdminAndOrgTabs ? (
         <TabsBar className={styles.tabsMargin}>
           <Tab
-            label="All users"
+            label="Все пользователи"
             active={view === TabView.ADMIN}
             onChangeTab={() => setView(TabView.ADMIN)}
             data-testid={selectors.tabs.allUsers}
           />
           <Tab
-            label="Organization users"
+            label="Пользователи организации"
             active={view === TabView.ORG}
             onChangeTab={() => setView(TabView.ORG)}
             data-testid={selectors.tabs.orgUsers}
           />
           {config.anonymousEnabled && (
             <Tab
-              label="Anonymous devices"
+              label="Анонимные устройства"
               active={view === TabView.ANON}
               onChangeTab={() => setView(TabView.ANON)}
               data-testid={selectors.tabs.anonUserDevices}

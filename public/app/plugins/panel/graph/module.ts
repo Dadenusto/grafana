@@ -235,7 +235,7 @@ export class GraphCtrl extends MetricsPanelCtrl {
             return {
               title: 'Unable to graph data',
               tip: 'Data exists, but is not timeseries',
-              actionText: 'Switch to table view',
+              actionText: 'Switch to Табличное представление',
               action: () => {
                 dispatch(changePanelPlugin({ panel: this.panel, pluginId: 'table' }));
               },

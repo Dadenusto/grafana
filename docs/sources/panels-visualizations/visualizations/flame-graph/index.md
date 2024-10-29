@@ -123,7 +123,7 @@ The status bar shows metadata about the flame graph and currently applied modifi
 
 The top table shows the functions from the profile in table format. The table has three columns: symbols, self, and total. The table is sorted by self time by default, but can be reordered by total time or symbol name by clicking the column headers. Each row represents aggregated values for the given function if the function appears in multiple places in the profile.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/flamegraph/screenshot-flamegraph-10.1-table.png" max-width="650px" alt="Table view">}}
+{{< figure src="/media/docs/grafana/panels-visualizations/flamegraph/screenshot-flamegraph-10.1-table.png" max-width="650px" alt="Табличное представление">}}
 
 There are also action buttons on the left-most side of each row. The first button searches for the function name while second button shows the sandwich view of the function.
 

@@ -77,7 +77,7 @@ const ui = {
   loadingIndicator: byText('Loading...'),
   timestampViewer: byRole('list', { name: 'State history by timestamp' }),
   record: byRole('listitem'),
-  noRecords: byText('No state transitions have occurred in the last 30 days'),
+  noRecords: byText('No state transitions have occurred in the Последние 30 дней'),
   timelineChart: byTestId('uplot-main-div'),
 };
 

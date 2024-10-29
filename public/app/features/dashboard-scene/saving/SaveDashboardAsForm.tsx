@@ -139,7 +139,7 @@ export function SaveDashboardAsForm({ dashboard, changeInfo }: Props) {
         />
       </Field>
       {!changeInfo.isNew && (
-        <Field label="Copy tags">
+        <Field label="Rjgbhjdfnm">
           <Switch {...register('copyTags')} />
         </Field>
       )}

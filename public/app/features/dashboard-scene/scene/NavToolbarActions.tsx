@@ -278,7 +278,7 @@ export function ToolbarActions({ dashboard }: Props) {
         icon="arrow-left"
         data-testid={selectors.components.NavToolbar.editDashboard.backToDashboardButton}
       >
-        Back to dashboard
+        Вернуться к дашборду
       </Button>
     ),
   });
@@ -299,7 +299,7 @@ export function ToolbarActions({ dashboard }: Props) {
         icon="arrow-left"
         data-testid={selectors.components.NavToolbar.editDashboard.backToDashboardButton}
       >
-        Back to dashboard
+        Вернуться к дашборду
       </Button>
     ),
   });
@@ -321,7 +321,7 @@ export function ToolbarActions({ dashboard }: Props) {
         }}
         data-testid={selectors.components.NavToolbar.shareDashboard}
       >
-        Share
+        Поделиться
       </Button>
     ),
   });
@@ -334,14 +334,14 @@ export function ToolbarActions({ dashboard }: Props) {
         onClick={() => {
           dashboard.onEnterEditMode();
         }}
-        tooltip="Enter edit mode"
+        tooltip="Войти в режим редактирования"
         key="edit"
         className={styles.buttonWithExtraMargin}
         variant={config.featureToggles.newDashboardSharingComponent ? 'secondary' : 'primary'}
         size="sm"
         data-testid={selectors.components.NavToolbar.editDashboard.editButton}
       >
-        Edit
+        Редактировать
       </Button>
     ),
   });
@@ -355,14 +355,14 @@ export function ToolbarActions({ dashboard }: Props) {
           dashboard.onEnterEditMode();
           dashboard.setState({ editable: true, meta: { ...meta, canEdit: true } });
         }}
-        tooltip="This dashboard was marked as read only"
+        tooltip="Этот дашборд был помечен как доступный только для чтения"
         key="edit"
         className={styles.buttonWithExtraMargin}
         variant="secondary"
         size="sm"
         data-testid={selectors.components.NavToolbar.editDashboard.editButton}
       >
-        Make editable
+        Сделать редактируемым
       </Button>
     ),
   });
@@ -387,14 +387,14 @@ export function ToolbarActions({ dashboard }: Props) {
         onClick={() => {
           dashboard.onOpenSettings();
         }}
-        tooltip="Dashboard settings"
+        tooltip="Настройки дашборда"
         fill="text"
         size="sm"
         key="settings"
         variant="secondary"
         data-testid={selectors.components.NavToolbar.editDashboard.settingsButton}
       >
-        Settings
+        Настройки
       </Button>
     ),
   });
@@ -405,14 +405,14 @@ export function ToolbarActions({ dashboard }: Props) {
     render: () => (
       <Button
         onClick={() => dashboard.exitEditMode({ skipConfirm: false })}
-        tooltip="Exits edit mode and discards unsaved changes"
+        tooltip="Выйти из режима редактирования и сбросить несохраненные изменения"
         size="sm"
         key="discard"
         fill="text"
         variant="primary"
         data-testid={selectors.components.NavToolbar.editDashboard.exitButton}
       >
-        Exit edit
+        Выйти из режима редактирования
       </Button>
     ),
   });
@@ -423,7 +423,7 @@ export function ToolbarActions({ dashboard }: Props) {
     render: () => (
       <Button
         onClick={editPanel?.onDiscard}
-        tooltip={editPanel?.state.isNewPanel ? 'Discard panel' : 'Discard panel changes'}
+        tooltip={editPanel?.state.isNewPanel ? 'Удалить панель' : 'Отменить изменения панели'}
         size="sm"
         disabled={!isEditedPanelDirty}
         key="discard"
@@ -431,7 +431,7 @@ export function ToolbarActions({ dashboard }: Props) {
         variant="destructive"
         data-testid={selectors.components.NavToolbar.editDashboard.discardChangesButton}
       >
-        {editPanel?.state.isNewPanel ? 'Discard panel' : 'Discard panel changes'}
+        {editPanel?.state.isNewPanel ? 'Удалить панель' : 'Отменить изменения панели'}
       </Button>
     ),
   });
@@ -442,14 +442,14 @@ export function ToolbarActions({ dashboard }: Props) {
     render: () => (
       <Button
         onClick={editPanel?.onDiscard}
-        tooltip="Discard library panel changes"
+        tooltip="Отменить изменения в панели библиотеки"
         size="sm"
         key="discardLibraryPanel"
         fill="outline"
         variant="destructive"
         data-testid={selectors.components.NavToolbar.editDashboard.discardChangesButton}
       >
-        Discard library panel changes
+        Отменить изменения в панели библиотеки
       </Button>
     ),
   });
@@ -460,14 +460,14 @@ export function ToolbarActions({ dashboard }: Props) {
     render: () => (
       <Button
         onClick={editPanel?.onUnlinkLibraryPanel}
-        tooltip="Unlink library panel"
+        tooltip="Отсоединить панель библиотеки ссылок"
         size="sm"
         key="unlinkLibraryPanel"
         fill="outline"
         variant="secondary"
         data-testid={selectors.components.NavToolbar.editDashboard.unlinkLibraryPanelButton}
       >
-        Unlink library panel
+        Отсоединить панель библиотеки ссылок
       </Button>
     ),
   });
@@ -478,14 +478,14 @@ export function ToolbarActions({ dashboard }: Props) {
     render: () => (
       <Button
         onClick={editPanel?.onSaveLibraryPanel}
-        tooltip="Save library panel"
+        tooltip="Панель сохранения библиотеки"
         size="sm"
         key="saveLibraryPanel"
         fill="outline"
         variant="primary"
         data-testid={selectors.components.NavToolbar.editDashboard.saveLibraryPanelButton}
       >
-        Save library panel
+        Панель сохранения библиотеки
       </Button>
     ),
   });
@@ -502,13 +502,13 @@ export function ToolbarActions({ dashboard }: Props) {
               dashboard.openSaveDrawer({});
             }}
             className={styles.buttonWithExtraMargin}
-            tooltip="Save changes"
+            tooltip="Сохрранить изменения"
             key="save"
             size="sm"
             variant={'primary'}
             data-testid={selectors.components.NavToolbar.editDashboard.saveButton}
           >
-            Save dashboard
+            Сохранить дашборд
           </Button>
         );
       }
@@ -521,12 +521,12 @@ export function ToolbarActions({ dashboard }: Props) {
               dashboard.openSaveDrawer({ saveAsCopy: true });
             }}
             className={styles.buttonWithExtraMargin}
-            tooltip="Save as copy"
+            tooltip="Сохранить как копию"
             key="save"
             size="sm"
             variant={isDirty ? 'primary' : 'secondary'}
           >
-            Save as copy
+            Сохранить как копию
           </Button>
         );
       }
@@ -535,14 +535,14 @@ export function ToolbarActions({ dashboard }: Props) {
       const menu = (
         <Menu>
           <Menu.Item
-            label="Save"
+            label="Сохранить"
             icon="save"
             onClick={() => {
               dashboard.openSaveDrawer({});
             }}
           />
           <Menu.Item
-            label="Save as copy"
+            label="Сохранить как копию"
             icon="copy"
             onClick={() => {
               dashboard.openSaveDrawer({ saveAsCopy: true });
@@ -557,16 +557,16 @@ export function ToolbarActions({ dashboard }: Props) {
             onClick={() => {
               dashboard.openSaveDrawer({});
             }}
-            tooltip="Save changes"
+            tooltip="Сохранить изменения"
             size="sm"
             data-testid={selectors.components.NavToolbar.editDashboard.saveButton}
             variant={isDirty ? 'primary' : 'secondary'}
           >
-            Save dashboard
+            Сохранить изменения
           </Button>
           <Dropdown overlay={menu}>
             <Button
-              aria-label="More save options"
+              aria-label="Дополнительные параметры сохранения"
               icon="angle-down"
               variant={isDirty ? 'primary' : 'secondary'}
               size="sm"

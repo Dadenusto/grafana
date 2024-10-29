@@ -72,7 +72,7 @@ export const SaveDashboardForm = ({
                 saveTimerange: !options.saveTimerange,
               })
             }
-            label="Save current time range as dashboard default"
+            label="Сохранить текущий диапазон времени в качестве значения дашборда по умолчанию"
             aria-label={selectors.pages.SaveDashboardModal.saveTimerange}
           />
         )}
@@ -85,7 +85,7 @@ export const SaveDashboardForm = ({
                 saveVariables: !options.saveVariables,
               })
             }
-            label="Save current variable values as dashboard default"
+            label="Сохранение текущих значений переменных в качестве значений дашборда по умолчанию"
             aria-label={selectors.pages.SaveDashboardModal.saveVariables}
           />
         )}
@@ -113,7 +113,7 @@ export const SaveDashboardForm = ({
               });
               setMessage(e.currentTarget.value);
             }}
-            placeholder="Add a note to describe your changes."
+            placeholder="Добавьте примечание с описанием ваших изменений."
             autoFocus
             rows={5}
           />
@@ -121,7 +121,7 @@ export const SaveDashboardForm = ({
 
         <Stack alignItems="center">
           <Button variant="secondary" onClick={onCancel} fill="outline">
-            Cancel
+            Отмена
           </Button>
           <Button
             type="submit"
@@ -129,9 +129,9 @@ export const SaveDashboardForm = ({
             icon={saving ? 'spinner' : undefined}
             aria-label={selectors.pages.SaveDashboardModal.save}
           >
-            {isLoading ? 'Saving...' : 'Save'}
+            {isLoading ? 'Сохранение...' : 'Сохранить'}
           </Button>
-          {!saveModel.hasChanges && <div>No changes to save</div>}
+          {!saveModel.hasChanges && <div>Нет изменений для сохранения</div>}
         </Stack>
       </Stack>
     </form>

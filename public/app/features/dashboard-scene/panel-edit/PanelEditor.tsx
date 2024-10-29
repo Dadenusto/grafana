@@ -241,7 +241,7 @@ export class PanelEditor extends SceneObjectBase<PanelEditorState> {
     const dashboard = getDashboardSceneFor(this);
 
     return {
-      text: 'Edit panel',
+      text: 'Изменить текст',
       parentItem: dashboard.getPageNav(location, navIndex),
     };
   }
