@@ -17,5 +17,5 @@ export function DataSourcePluginConfigPage({ plugin, pageId }: Props) {
     return <page.body plugin={plugin} query={{}} />;
   }
 
-  return <div>Page not found: {page}</div>;
+  return <div>Страница не найденас: {page}</div>;
 }

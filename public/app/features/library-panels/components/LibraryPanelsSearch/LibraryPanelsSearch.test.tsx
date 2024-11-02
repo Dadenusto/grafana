@@ -72,11 +72,11 @@ async function getTestContext(
 
   jest.spyOn(getGrafanaSearcher(), 'getSortOptions').mockResolvedValue([
     {
-      label: 'Alphabetically (A–Z)',
+      label: 'Алфавитный (A–Z)',
       value: 'alpha-asc',
     },
     {
-      label: 'Alphabetically (Z–A)',
+      label: 'Алфавитный (Z–A)',
       value: 'alpha-desc',
     },
   ]);

@@ -51,8 +51,8 @@ function buildNavIndex(navIndex: NavIndex, children: NavModelItem[], parentItem?
     parentItem.children = translatedChildren;
   }
 
-  navIndex['not-found'] = { ...buildWarningNav('Page not found', '404 Error').node };
-  navIndex['error'] = { ...buildWarningNav('Page error', 'An unexpected error').node };
+  navIndex['not-found'] = { ...buildWarningNav('Страница не найдена', '404 Error').node };
+  navIndex['error'] = { ...buildWarningNav('Ошибка страницы', 'An unexpected error').node };
 }
 
 function buildWarningNav(text: string, subTitle?: string): NavModel {

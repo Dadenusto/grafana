@@ -42,7 +42,7 @@ export function NameCell({ row: { original: data }, onFolderClick, treeID }: Nam
         {item.uiKind === 'empty-folder' ? (
           <em className={styles.emptyText}>
             <Text variant="body" color="secondary" truncate>
-              No items
+              Нет элементов
             </Text>
           </em>
         ) : (

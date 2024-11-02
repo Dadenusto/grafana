@@ -11,15 +11,15 @@ interface Props {
 }
 
 const SORT_OPTIONS = [
-  { label: 'Disabled', value: VariableSort.disabled },
-  { label: 'Alphabetical (asc)', value: VariableSort.alphabeticalAsc },
-  { label: 'Alphabetical (desc)', value: VariableSort.alphabeticalDesc },
-  { label: 'Numerical (asc)', value: VariableSort.numericalAsc },
-  { label: 'Numerical (desc)', value: VariableSort.numericalDesc },
-  { label: 'Alphabetical (case-insensitive, asc)', value: VariableSort.alphabeticalCaseInsensitiveAsc },
-  { label: 'Alphabetical (case-insensitive, desc)', value: VariableSort.alphabeticalCaseInsensitiveDesc },
-  { label: 'Natural (asc)', value: VariableSort.naturalAsc },
-  { label: 'Natural (desc)', value: VariableSort.naturalDesc },
+  { label: 'Отключена', value: VariableSort.disabled },
+  { label: 'Алфавитный (А-Я)', value: VariableSort.alphabeticalAsc },
+  { label: 'Алфавитный (Я-A)', value: VariableSort.alphabeticalDesc },
+  { label: 'Численный (по возрастанию)', value: VariableSort.numericalAsc },
+  { label: 'Численный (по убыванию)', value: VariableSort.numericalDesc },
+  { label: 'Алфавитный (нечувствительный к регистру, А-Я)', value: VariableSort.alphabeticalCaseInsensitiveAsc },
+  { label: 'Алфавитный (нечувствительный к регистру, Я-A)', value: VariableSort.alphabeticalCaseInsensitiveDesc },
+  { label: 'Натуральная (по возрастанию)', value: VariableSort.naturalAsc },
+  { label: 'Натуральная (по убыванию)', value: VariableSort.naturalDesc },
 ];
 
 export function QueryVariableSortSelect({ onChange, sort, testId }: PropsWithChildren<Props>) {

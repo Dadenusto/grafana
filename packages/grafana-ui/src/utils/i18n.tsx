@@ -19,7 +19,7 @@ function initI18n() {
     i18next.use(initReactI18next).init({
       resources: {},
       returnEmptyString: false,
-      lng: 'en-US', // this should be the locale of the phrases in our source JSX
+      lng: 'ru-RU', // this should be the locale of the phrases in our source JSX
     });
   }
 }

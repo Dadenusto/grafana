@@ -62,7 +62,7 @@ const MenuComp = React.forwardRef<HTMLDivElement, MenuProps>(
   }
 );
 
-MenuComp.displayName = 'Menu';
+MenuComp.displayName = 'Меню';
 
 export const Menu = Object.assign(MenuComp, {
   Item: MenuItem,

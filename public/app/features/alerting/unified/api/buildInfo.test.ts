@@ -117,7 +117,7 @@ describe('discoverDataSourceFeatures', () => {
       mocks.fetchTestRulerRulesGroup.mockRejectedValue({
         status: 404,
         data: {
-          message: 'page not found',
+          message: 'Страница не найдена',
         },
       });
       mocks.fetchRules.mockResolvedValue([]);

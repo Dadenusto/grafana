@@ -221,7 +221,7 @@ func (hs *HTTPServer) getRedirectToForAutoLogin(c *contextmodel.ReqContext) stri
 
 func (hs *HTTPServer) LoginAPIPing(c *contextmodel.ReqContext) response.Response {
 	if c.IsSignedIn || c.IsAnonymous {
-		return response.JSON(http.StatusOK, util.DynMap{"message": "Logged in"})
+		return response.JSON(http.StatusOK, util.DynMap{"message": "Вход"})
 	}
 
 	return response.Error(http.StatusUnauthorized, "Unauthorized", nil)

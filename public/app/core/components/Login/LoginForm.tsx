@@ -33,29 +33,30 @@ export const LoginForm = ({ children, onSubmit, isLoggingIn, passwordHint, login
     <div className={styles.wrapper}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Field
-          label={t('login.form.username-label', 'Email or username')}
+          label="Адрес электронной почты или имя пользователя"
           invalid={!!errors.user}
           error={errors.user?.message}
         >
           <Input
-            {...register('user', { required: t('login.form.username-required', 'Email or username is required') })}
+            {...register('user', {
+              required: t(
+                'Требуется указать адрес электронной почты или имя пользователя',
+                'Email or username is required'
+              ),
+            })}
             id={usernameId}
             autoFocus
             autoCapitalize="none"
-            placeholder={loginHint || t('login.form.username-placeholder', 'email or username')}
+            placeholder="Логин или пароль"
             data-testid={selectors.pages.Login.username}
           />
         </Field>
-        <Field
-          label={t('login.form.password-label', 'Password')}
-          invalid={!!errors.password}
-          error={errors.password?.message}
-        >
+        <Field label="Пароль" invalid={!!errors.password} error={errors.password?.message}>
           <PasswordField
             {...register('password', { required: t('login.form.password-required', 'Password is required') })}
             id={passwordId}
             autoComplete="current-password"
-            placeholder={passwordHint || t('login.form.password-placeholder', 'password')}
+            placeholder="пароль"
           />
         </Field>
         <Button
@@ -64,7 +65,7 @@ export const LoginForm = ({ children, onSubmit, isLoggingIn, passwordHint, login
           className={styles.submitButton}
           disabled={isLoggingIn}
         >
-          {isLoggingIn ? t('login.form.submit-loading-label', 'Logging in...') : t('login.form.submit-label', 'Log in')}
+          Войти
         </Button>
         {children}
       </form>

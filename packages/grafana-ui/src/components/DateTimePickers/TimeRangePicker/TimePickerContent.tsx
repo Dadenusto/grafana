@@ -279,7 +279,7 @@ const getStyles = (
   container: css({
     background: theme.colors.background.primary,
     boxShadow: theme.shadows.z3,
-    width: `${isFullscreen ? '546px' : '262px'}`,
+    width: `${isFullscreen ? '660px' : '262px'}`,
     borderRadius: theme.shape.radius.default,
     border: `1px solid ${theme.colors.border.weak}`,
     [`${isReversed ? 'left' : 'right'}`]: 0,
@@ -302,7 +302,7 @@ const getStyles = (
     order: isReversed ? 1 : 0,
   }),
   rightSide: css({
-    width: `${isFullscreen ? '40%' : '100%'}; !important`,
+    width: `${isFullscreen ? '50%' : '100%'}; !important`,
     borderRight: isReversed ? `1px solid ${theme.colors.border.weak}` : 'none',
     display: 'flex',
     flexDirection: 'column',

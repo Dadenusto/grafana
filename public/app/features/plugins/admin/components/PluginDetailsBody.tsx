@@ -130,7 +130,7 @@ export function PluginDetailsBody({ plugin, queryParams, pageId }: Props): JSX.E
 
   return (
     <div>
-      <p>Page not found.</p>
+      <p>Страница не найдена.</p>
     </div>
   );
 }

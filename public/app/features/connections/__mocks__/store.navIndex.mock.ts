@@ -82,7 +82,7 @@ export const navIndex: NavIndex = {
     url: '/library-panels',
   },
   'not-found': {
-    text: 'Page not found',
+    text: 'Страница не найдена',
     subTitle: '404 Error',
     icon: 'exclamation-triangle',
   },

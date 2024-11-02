@@ -6,7 +6,7 @@ export function getExceptionNav(error: unknown): NavModel {
 }
 
 export function getNotFoundNav(): NavModel {
-  return getWarningNav('Page not found', '404 Error');
+  return getWarningNav('Страница не найдена', '404 Error');
 }
 
 export function getWarningNav(text: string, subTitle?: string): NavModel {

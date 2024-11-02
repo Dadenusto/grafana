@@ -70,11 +70,11 @@ const unifiedAlertList = new PanelPlugin<UnifiedAlertListOptions>(UnifiedAlertLi
       description: 'Sort order of alerts and alert instances',
       settings: {
         options: [
-          { label: 'Alphabetical (asc)', value: SortOrder.AlphaAsc },
-          { label: 'Alphabetical (desc)', value: SortOrder.AlphaDesc },
-          { label: 'Importance', value: SortOrder.Importance },
-          { label: 'Time (asc)', value: SortOrder.TimeAsc },
-          { label: 'Time (desc)', value: SortOrder.TimeDesc },
+          { label: 'Алфавитный (А-Я)', value: SortOrder.AlphaAsc },
+          { label: 'Алфавитный (Я-А)', value: SortOrder.AlphaDesc },
+          { label: 'Важность', value: SortOrder.Importance },
+          { label: 'Время (по возрастанию)', value: SortOrder.TimeAsc },
+          { label: 'Время (по убыванию)', value: SortOrder.TimeDesc },
         ],
       },
       defaultValue: SortOrder.AlphaAsc,

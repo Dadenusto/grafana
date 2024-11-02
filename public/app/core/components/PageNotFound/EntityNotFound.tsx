@@ -11,17 +11,13 @@ export interface Props {
   entity?: string;
 }
 
-export function EntityNotFound({ entity = 'Page' }: Props) {
+export function EntityNotFound({ entity = 'Страница' }: Props) {
   const styles = useStyles2(getStyles);
 
   return (
     <div className={styles.container} data-testid={selectors.components.EntityNotFound.container}>
-      <EmptyState message={`${entity} not found`} variant="not-found">
-        We&apos;re looking but can&apos;t seem to find this {entity.toLowerCase()}. Try returning{' '}
-        <TextLink href="/">home</TextLink> or seeking help on the{' '}
-        <TextLink href="https://community.grafana.com" external>
-          community site.
-        </TextLink>
+      <EmptyState message={`${entity} не найдена`} variant="not-found">
+        Мы ищем, но, похоже, не можем найти эту страницу. Попробуйте вернуться <TextLink href="/">на главную</TextLink>.
       </EmptyState>
     </div>
   );

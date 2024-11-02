@@ -126,7 +126,7 @@ export function ToolbarActions({ dashboard }: Props) {
     render: () => (
       <ToolbarButton
         key="view-in-old-dashboard-button"
-        tooltip={'Switch to old dashboard page'}
+        tooltip={'Переключитесь на старую страницу дашборда'}
         icon="apps"
         onClick={() => {
           locationService.partial({ scenes: false });

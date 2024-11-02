@@ -6,7 +6,6 @@ import { GrafanaTheme2 } from '@grafana/data';
 import { config } from '@grafana/runtime';
 import { Alert, LinkButton, Stack, useStyles2 } from '@grafana/ui';
 import { Branding } from 'app/core/components/Branding/Branding';
-import { t, Trans } from 'app/core/internationalization';
 
 import { ChangePassword } from '../ForgottenPassword/ChangePassword';
 
@@ -39,7 +38,7 @@ const LoginPage = () => {
           {!isChangingPassword && (
             <InnerBox>
               {loginErrorMessage && (
-                <Alert className={styles.alert} severity="error" title={t('login.error.title', 'Login failed')}>
+                <Alert className={styles.alert} severity="error" title="Ошибка входа">
                   {loginErrorMessage}
                 </Alert>
               )}
@@ -53,7 +52,7 @@ const LoginPage = () => {
                         fill="text"
                         href={`${config.appSubUrl}/user/password/send-reset-email`}
                       >
-                        <Trans i18nKey="login.forgot-password">Забыли пароль?</Trans>
+                        Забыли пароль?
                       </LinkButton>
                     )}
                   </Stack>

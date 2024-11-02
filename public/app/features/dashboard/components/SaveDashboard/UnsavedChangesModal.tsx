@@ -24,13 +24,13 @@ export const UnsavedChangesModal = ({ dashboard, onSaveSuccess, onDiscard, onDis
         width: '500px',
       })}
     >
-      <h5>Do you want to save your changes?</h5>
+      <h5>Вы хотите сохранить внесенные изменения?</h5>
       <Modal.ButtonRow>
         <Button variant="secondary" onClick={onDismiss} fill="outline">
-          Cancel
+          Закрыть окно
         </Button>
         <Button variant="destructive" onClick={onDiscard}>
-          Discard
+          Отменить изменения
         </Button>
         <SaveDashboardButton dashboard={dashboard} onSaveSuccess={onSaveSuccess} />
       </Modal.ButtonRow>

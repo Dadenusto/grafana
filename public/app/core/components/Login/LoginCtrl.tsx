@@ -2,7 +2,6 @@ import { PureComponent } from 'react';
 
 import { FetchError, getBackendSrv, isFetchError } from '@grafana/runtime';
 import config from 'app/core/config';
-import { t } from 'app/core/internationalization';
 
 import { LoginDTO } from './types';
 
@@ -106,7 +105,7 @@ export class LoginCtrl extends PureComponent<Props, State> {
         const fetchErrorMessage = isFetchError(err) ? getErrorMessage(err) : undefined;
         this.setState({
           isLoggingIn: false,
-          loginErrorMessage: fetchErrorMessage || t('login.error.unknown', 'Unknown error occurred'),
+          loginErrorMessage: fetchErrorMessage || 'Призошла неизвестная ошибка',
         });
       });
   };
@@ -169,12 +168,9 @@ function getErrorMessage(err: FetchError<undefined | { messageId?: string; messa
     case 'password-auth.empty':
     case 'password-auth.failed':
     case 'password-auth.invalid':
-      return t('login.error.invalid-user-or-password', 'Invalid username or password');
+      return 'Неверное имя пользователя или пароль';
     case 'login-attempt.blocked':
-      return t(
-        'login.error.blocked',
-        'You have exceeded the number of login attempts for this user. Please try again later.'
-      );
+      return 'Вы превысили количество попыток входа в систему для этого пользователя. Пожалуйста, повторите попытку позже.';
     default:
       return err.data?.message;
   }
@@ -183,7 +179,7 @@ function getErrorMessage(err: FetchError<undefined | { messageId?: string; messa
 function getBootDataErrMessage(str?: string) {
   switch (str) {
     case 'oauth.login.error':
-      return t('oauth.login.error', 'Login provider denied login request');
+      return 'Поставщик услуг входа отклонил запрос на вход в систему';
     default:
       return str;
   }

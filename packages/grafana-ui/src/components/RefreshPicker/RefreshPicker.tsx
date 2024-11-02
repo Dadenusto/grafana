@@ -71,8 +71,8 @@ export class RefreshPicker extends PureComponent<Props> {
   }
 
   render() {
-    const { onRefresh, intervals, tooltip, value, text, isLoading, noIntervalPicker, width, showAutoInterval } =
-      this.props;
+    const { onRefresh, intervals, tooltip, value, isLoading, noIntervalPicker, showAutoInterval } = this.props;
+    const width = '114px';
 
     const currentValue = value || '';
     const variant = this.getVariant();
@@ -104,7 +104,7 @@ export class RefreshPicker extends PureComponent<Props> {
     return (
       <ButtonGroup className="refresh-picker">
         <ToolbarButton
-          aria-label={text}
+          aria-label="Обновить"
           tooltip={tooltip}
           onClick={onRefresh}
           variant={variant}
@@ -112,7 +112,7 @@ export class RefreshPicker extends PureComponent<Props> {
           style={width ? { width } : undefined}
           data-testid={selectors.components.RefreshPicker.runButtonV2}
         >
-          {text}
+          Обновить
         </ToolbarButton>
         {!noIntervalPicker && (
           <ButtonSelect

@@ -18,12 +18,12 @@ const OrgProfile = ({ onSubmit, orgName }: Props) => {
   return (
     <Form defaultValues={{ orgName }} onSubmit={({ orgName }: FormDTO) => onSubmit(orgName)}>
       {({ register }) => (
-        <FieldSet label="Organization profile" disabled={!canWriteOrg}>
-          <Field label="Organization name">
+        <FieldSet label="Профиль организации" disabled={!canWriteOrg}>
+          <Field label="Название организации">
             <Input id="org-name-input" type="text" {...register('orgName', { required: true })} />
           </Field>
 
-          <Button type="submit">Update organization name</Button>
+          <Button type="submit">Обновить название организации</Button>
         </FieldSet>
       )}
     </Form>

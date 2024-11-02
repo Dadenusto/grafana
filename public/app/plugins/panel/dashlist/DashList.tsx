@@ -155,17 +155,17 @@ export function DashList(props: PanelProps<Options>) {
 
   const dashboardGroups: DashboardGroup[] = [
     {
-      header: 'Starred dashboards',
+      header: 'Избранные дашборды',
       dashboards: starredDashboards,
       show: showStarred,
     },
     {
-      header: 'Recently viewed dashboards',
+      header: 'Недавно просмотренные дашборды',
       dashboards: recentDashboards,
       show: showRecentlyViewed,
     },
     {
-      header: 'Search',
+      header: 'Поиск',
       dashboards: searchedDashboards,
       show: showSearch,
     },
@@ -192,7 +192,9 @@ export function DashList(props: PanelProps<Options>) {
                 {showFolderNames && dash.folderTitle && <div className={css.dashlistFolder}>{dash.folderTitle}</div>}
               </div>
               <IconButton
-                tooltip={dash.isStarred ? `Unmark "${dash.title}" as favorite` : `Mark "${dash.title}" as favorite`}
+                tooltip={
+                  dash.isStarred ? `Снять избранное с "${dash.title}"` : `Отметить "${dash.title}" как избранное`
+                }
                 name={dash.isStarred ? 'favorite' : 'star'}
                 iconType={dash.isStarred ? 'mono' : 'default'}
                 onClick={(e) => toggleDashboardStar(e, dash)}

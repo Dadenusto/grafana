@@ -148,11 +148,11 @@ export default function Browse() {
                 value={sortBy}
                 onChange={onSortByChange}
                 options={[
-                  { value: 'nameAsc', label: 'By name (A-Z)' },
-                  { value: 'nameDesc', label: 'By name (Z-A)' },
-                  { value: 'updated', label: 'By updated date' },
-                  { value: 'published', label: 'By published date' },
-                  { value: 'downloads', label: 'By downloads' },
+                  { value: 'nameAsc', label: 'По имени (А-Я)' },
+                  { value: 'nameDesc', label: 'По имени (Я-А)' },
+                  { value: 'updated', label: 'По дате обновления' },
+                  { value: 'published', label: 'По дате публикации' },
+                  { value: 'downloads', label: 'По загрузкам' },
                 ]}
               />
             </Field>

@@ -130,15 +130,15 @@ export const UnsavedChangesModal = ({ onDiscard, onDismiss, onSaveDashboardClick
       icon="exclamation-triangle"
       className={styles.modal}
     >
-      <h5>Do you want to save your changes?</h5>
+      <h5>Вы хотите сохранить внесенные изменения?</h5>
       <Modal.ButtonRow>
         <Button variant="secondary" onClick={onDismiss} fill="outline">
-          Cancel
+          Закрыть окно
         </Button>
         <Button variant="destructive" onClick={onDiscard}>
-          Discard
+          Отменить изменения
         </Button>
-        <Button onClick={onSaveDashboardClick}>Save dashboard</Button>
+        <Button onClick={onSaveDashboardClick}>Сохранить изменения</Button>
       </Modal.ButtonRow>
     </Modal>
   );
@@ -146,7 +146,7 @@ export const UnsavedChangesModal = ({ onDiscard, onDismiss, onSaveDashboardClick
 
 const getStyles = () => ({
   modal: css({
-    width: '500px',
+    width: '584px',
   }),
 });
 

@@ -503,7 +503,7 @@ export const mockNavModel: NavIndex = {
     },
   },
   'not-found': {
-    text: 'Page not found',
+    text: 'Страница не найдена',
     subTitle: '404 Error',
     icon: 'exclamation-triangle',
   },

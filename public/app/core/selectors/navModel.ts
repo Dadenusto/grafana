@@ -8,7 +8,7 @@ import { HOME_NAV_ID } from '../reducers/navModel';
 const getNotFoundModel = (): NavModel => {
   const node: NavModelItem = {
     id: 'not-found',
-    text: 'Page not found',
+    text: 'Страница не найдена',
     icon: 'exclamation-triangle',
     subTitle: '404 Error',
     url: 'not-found',
