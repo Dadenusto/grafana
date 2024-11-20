@@ -24,7 +24,13 @@ import { dataFrameToLogsModel } from '../logs/logsModel';
 
 import { InspectDataOptions } from './InspectDataOptions';
 import { getPanelInspectorStyles } from './styles';
-import { downloadAsJson, downloadDataFrameAsCsv, downloadLogsModelAsTxt, downloadTraceAsJson } from './utils/download';
+import {
+  downloadAsJson,
+  downloadDataFrameAsCsv,
+  downloadDataFrameAsXlsx,
+  downloadLogsModelAsTxt,
+  downloadTraceAsJson,
+} from './utils/download';
 
 interface Props {
   isLoading: boolean;
@@ -103,6 +109,18 @@ export class InspectDataTab extends PureComponent<Props, State> {
     }
 
     downloadDataFrameAsCsv(dataFrame, dataName, { useExcelHeader: this.state.downloadForExcel }, transformId);
+  }
+
+  exportXlsx(dataFrames: DataFrame[], hasLogs: boolean) {
+    const { dataName } = this.props;
+    const { transformId } = this.state;
+    const dataFrame = dataFrames[this.state.dataFrameIndex];
+
+    if (hasLogs) {
+      reportInteraction('grafana_logs_download_clicked', { app: this.props.app, format: 'xlsx' });
+    }
+
+    downloadDataFrameAsXlsx(dataFrame, dataName, { useExcelHeader: this.state.downloadForExcel }, transformId);
   }
 
   onExportLogsAsTxt = () => {
@@ -222,6 +240,9 @@ export class InspectDataTab extends PureComponent<Props, State> {
       <>
         <Button variant="primary" onClick={() => this.exportCsv(dataFrames, hasLogs)} size="sm">
           <Trans i18nKey="dashboard.inspect-data.download-csv">Download CSV</Trans>
+        </Button>
+        <Button variant="primary" onClick={() => this.exportXlsx(dataFrames, hasLogs)} size="sm">
+          <Trans i18nKey="dashboard.inspect-data.download-xlsx">Download XLSX</Trans>
         </Button>
         {hasLogs && (
           <Button variant="primary" onClick={this.onExportLogsAsTxt} size="sm">

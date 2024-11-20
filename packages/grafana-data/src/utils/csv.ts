@@ -250,13 +250,13 @@ function getHeaderLine(key: string, fields: Field[], config: CSVConfig): string 
   return '';
 }
 
-function getLocaleDelimiter(): string {
-  const arr = ['x', 'y'];
-  if (arr.toLocaleString) {
-    return arr.toLocaleString().charAt(1);
-  }
-  return ',';
-}
+// function getLocaleDelimiter(): string {
+//   const arr = ['x', 'y'];
+//   if (arr.toLocaleString) {
+//     return arr.toLocaleString().charAt(1);
+//   }
+//   return ',';
+// }
 
 export function toCSV(data: DataFrame[], config?: CSVConfig): string {
   if (!data) {
@@ -264,7 +264,7 @@ export function toCSV(data: DataFrame[], config?: CSVConfig): string {
   }
 
   config = defaults(config, {
-    delimiter: getLocaleDelimiter(),
+    delimiter: ';',
     newline: '\r\n',
     quoteChar: '"',
     encoding: '',

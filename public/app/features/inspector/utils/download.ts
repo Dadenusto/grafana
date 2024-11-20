@@ -1,4 +1,5 @@
 import saveAs from 'file-saver';
+import * as XLSX from 'xlsx';
 
 import {
   CSVConfig,
@@ -60,12 +61,65 @@ export function downloadDataFrameAsCsv(
   const bomChar = csvConfig?.useExcelHeader ? String.fromCharCode(0xfeff) : '';
 
   const blob = new Blob([bomChar, dataFrameCsv], {
-    type: 'text/csv;charset=utf-8',
+    type: 'text/csv;windows-1251',
   });
 
   const transformation = transformId !== DataTransformerID.noop ? '-as-' + transformId.toLocaleLowerCase() : '';
   const fileName = `${title}-data${transformation}-${dateTimeFormat(new Date())}.csv`;
   saveAs(blob, fileName);
+}
+
+/**
+ * Exports a DataFrame as a XLSX file.
+ *
+ * @param {DataFrame} dataFrame
+ * @param {string} title
+ * @param {CSVConfig} [csvConfig]
+ * @param {DataTransformerID} [transformId=DataTransformerID.noop]
+ */
+export function downloadDataFrameAsXlsx(
+  dataFrame: DataFrame,
+  title: string,
+  csvConfig?: CSVConfig,
+  transformId: DataTransformerID = DataTransformerID.noop
+) {
+  const dataFrameCsv = toCSV([dataFrame], csvConfig)
+    .replaceAll('"', '')
+    .replaceAll(/(?<=[0-9])( | )(?=[0-9])/g, '')
+    .replaceAll(/(?<=[0-9]),(?=[0-9])/g, '.')
+    .replaceAll('_x000d_', '');
+
+  const rows = dataFrameCsv.split('\n').map((row, rowIndex) => {
+    const columns = row.split(';');
+    return columns.map((col) => {
+      // Преобразуем в число, если это возможно
+      const num = Number(col);
+      // console.log(isNaN(num) ? col : num)
+      return isNaN(num) ? col : num; // Если не число, возвращаем оригинальное значение
+    });
+  });
+
+  // Создаем рабочую книгу и лист
+  const worksheet = XLSX.utils.aoa_to_sheet(rows);
+  const workbook = XLSX.utils.book_new();
+
+  // Добавляем лист в рабочую книгу
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+  const transformation = transformId !== DataTransformerID.noop ? '-as-' + transformId.toLocaleLowerCase() : '';
+  const fileName = `${title}-data${transformation}-${dateTimeFormat(new Date())}.xlsx`;
+
+  // Сохраняем рабочую книгу в файл
+  XLSX.writeFile(workbook, `${fileName}.xlsx`);
+
+  // const bomChar = csvConfig?.useExcelHeader ? String.fromCharCode(0xfeff) : '';
+
+  // const blob = new Blob([bomChar, dataFrameCsv], {
+  //   type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+  // });
+
+  // const transformation = transformId !== DataTransformerID.noop ? '-as-' + transformId.toLocaleLowerCase() : '';
+  // const fileName = `${title}-data${transformation}-${dateTimeFormat(new Date())}.xlsx`;
+  // saveAs(blob, fileName);
 }
 
 /**
