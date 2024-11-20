@@ -85,17 +85,17 @@ export function downloadDataFrameAsXlsx(
 ) {
   const dataFrameCsv = toCSV([dataFrame], csvConfig)
     .replaceAll('"', '')
-    .replaceAll(/(?<=[0-9])( | )(?=[0-9])/g, '')
+    .replaceAll(/(?<=[0-9])( )(?=[0-9])/g, '')
     .replaceAll(/(?<=[0-9]),(?=[0-9])/g, '.')
     .replaceAll('_x000d_', '');
 
-  const rows = dataFrameCsv.split('\n').map((row, rowIndex) => {
+  const rows = dataFrameCsv.split('\r\n').map((row, rowIndex) => {
     const columns = row.split(';');
     return columns.map((col) => {
       // Преобразуем в число, если это возможно
       const num = Number(col);
       // console.log(isNaN(num) ? col : num)
-      return isNaN(num) ? col : num; // Если не число, возвращаем оригинальное значение
+      return isNaN(num) ? String(col) : num; // Если не число, возвращаем оригинальное значение
     });
   });
 
@@ -110,16 +110,6 @@ export function downloadDataFrameAsXlsx(
 
   // Сохраняем рабочую книгу в файл
   XLSX.writeFile(workbook, `${fileName}.xlsx`);
-
-  // const bomChar = csvConfig?.useExcelHeader ? String.fromCharCode(0xfeff) : '';
-
-  // const blob = new Blob([bomChar, dataFrameCsv], {
-  //   type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-  // });
-
-  // const transformation = transformId !== DataTransformerID.noop ? '-as-' + transformId.toLocaleLowerCase() : '';
-  // const fileName = `${title}-data${transformation}-${dateTimeFormat(new Date())}.xlsx`;
-  // saveAs(blob, fileName);
 }
 
 /**
