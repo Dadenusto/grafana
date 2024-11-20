@@ -86,15 +86,13 @@ export function downloadDataFrameAsXlsx(
   const dataFrameCsv = toCSV([dataFrame], csvConfig)
     .replaceAll('"', '')
     .replaceAll(/(?<=[0-9])( )(?=[0-9])/g, '')
-    .replaceAll(/(?<=[0-9]),(?=[0-9])/g, '.')
-    .replaceAll('_x000d_', '');
+    .replaceAll(/(?<=[0-9]),(?=[0-9])/g, '.');
 
   const rows = dataFrameCsv.split('\r\n').map((row, rowIndex) => {
     const columns = row.split(';');
     return columns.map((col) => {
       // Преобразуем в число, если это возможно
       const num = Number(col);
-      // console.log(isNaN(num) ? col : num)
       return isNaN(num) ? String(col) : num; // Если не число, возвращаем оригинальное значение
     });
   });
