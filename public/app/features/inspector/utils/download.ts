@@ -61,7 +61,7 @@ export function downloadDataFrameAsCsv(
   const bomChar = csvConfig?.useExcelHeader ? String.fromCharCode(0xfeff) : '';
 
   const blob = new Blob([bomChar, dataFrameCsv], {
-    type: 'text/csv;windows-1251',
+    type: 'text/csv;charset=windows-1251;',
   });
 
   const transformation = transformId !== DataTransformerID.noop ? '-as-' + transformId.toLocaleLowerCase() : '';
@@ -83,16 +83,15 @@ export function downloadDataFrameAsXlsx(
   csvConfig?: CSVConfig,
   transformId: DataTransformerID = DataTransformerID.noop
 ) {
-  const dataFrameCsv = toCSV([dataFrame], csvConfig)
+  const dataFrameCsv = toCSV([dataFrame], csvConfig, true)
     .replaceAll('"', '')
-    .replaceAll(/(?<=[0-9])( )(?=[0-9])/g, '')
-    .replaceAll(/(?<=[0-9]),(?=[0-9])/g, '.');
+    .replaceAll(/(?<=[0-9])( )(?=[0-9])/g, '');
 
   const rows = dataFrameCsv.split('\r\n').map((row, rowIndex) => {
     const columns = row.split(';');
     return columns.map((col) => {
       // Преобразуем в число, если это возможно
-      const num = Number(col);
+      const num = Number(col.replaceAll(/(?<=[0-9]),(?=[0-9])/g, '.'));
       return isNaN(num) ? String(col) : num; // Если не число, возвращаем оригинальное значение
     });
   });
